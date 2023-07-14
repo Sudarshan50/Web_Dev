@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .anime
+        {
+            animation: bouncing 1s cubic-bezier(0.1, 0.7, 1.0, 0.1) 0s infinite alternate-reverse both;
+            background-color:cyan;
+            color:rgb(5, 188, 5);
+            font-family: sans-serif cursive;
+            border: 2px solid black;
+            padding: 25px;
+            border-radius: 50%;
+            height: 100px;
+            width: 250px;
+            text-align: center;
+            position: relative;
+            top: 550px;
+            left: 500px;
+            font-weight: bolder;
+            font-size: xx-large;
+            cursor: pointer;
+
+        }
+        @keyframes bouncing 
+        {
+            0%
+            {
+                top: 550px;
+                left: 500px;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.627);
+            }
+            50%
+            {
+                top: 475px;
+                left: 300px;
+                background-color: bisque;
+                text-decoration: overline;
+            }
+
+            75%
+            {
+                top: 400px;
+                left: 500px;
+                box-shadow: 0 50px 50px rgba(0, 0, 0, 0.1);
+                text-decoration: underline;
+            }
+            
+            100%
+            {
+                top: 475px;
+                left: 700px;
+                background-color: greenyellow;
+                text-decoration: overline;
+            }
+            
+        }
+
+    </style>
+    <title>Animation</title>
+</head>
+<body>
+    <div class="anime">Loading</div>
+</body>
+</html>
