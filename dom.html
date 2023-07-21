@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <style>
+        li{
+            list-style: square;
+            background-color:whitesmoke;
+        }
+        hr
+        {
+            border: 1px solid rgb(88, 87, 87);
+            border-radius: 13px;
+        }
+        table
+        {
+            background-color: aliceblue;
+        }
+        button
+        {
+            padding: 3px;
+            margin: 3px;
+            color: blueviolet;
+            background-color: rgb(255, 242, 0);
+        }
+        button:hover
+        {
+            cursor: pointer;
+        }
+    </style>
+    <title>DOM maniulation</title>
+</head>
+<body>
+    <h1 style="font-family: sans-serif,cursive; text-decoration: underline;">
+        DOM Maniulation
+    </h1>
+    <ul id="klo">
+        <li class="bits" id="pop">One</li>
+        <li class="bits">Two</li>
+        <li class="bits">Three</li>
+        <li class="bits">Four</li>
+        <li class="bits">Five</li>
+</ul>
+<hr>
+    <table>
+        <tr>
+            <td>One</td>
+            <td>Two</td>
+        </tr>
+        <tr>
+            <td>Thr</td>
+            <td>Four</td>
+        </tr>
+    </table>
+
+    <hr>
+    <div id="guun" data="potty">
+        Hi,this is Sudarshan and I am researching on DOM.
+    </div>
+    <!-- Type - 1 button -->
+    <button id="sex" onclick="alert('Namaste World')">Click Me </button>
+    <br>
+    <!-- Type - 2 button -->
+    <button id="fuck">Hit Me </button>
+
+
+    <script>
+        /*const ko = document.querySelectorAll(".bits");
+        for(key in ko)
+        {
+            console.log(ko[key]);
+        }*/
+        //Root node
+        console.log(document.documentElement);
+        console.log(document.head);
+        console.log(document.body);
+        //Children Node
+        console.log(document.body.childNodes); // also include indentation as a nodes
+        console.log(document.body.children); // it only includes useful nodes that users had created..
+        console.log(document.body.firstChild);
+        console.log(document.body.lastChild);
+        //Making an array of body children so that is easy for acess..
+        const iop = Array.from(document.body.children)
+        console.log(iop);
+
+        //Tracking Siblings Node
+        const pol=(document.body.children[1]);
+        console.log(pol.nextElementSibling);
+
+        //Table DOM Manipulation..
+        const poo = document.body.children[2];
+        console.log(poo.tBodies[0].rows[0].cells[1].textContent);
+
+        //Element id tracking.. similary for class
+        console.log(document.getElementById("pop").textContent);
+
+        //query selector..
+        const lkj=(document.querySelectorAll(".bits"));
+        console.log(lkj[4].textContent);
+
+        //Attribute
+        guun.getAttribute('data');
+        guun.setAttribute('data','pending');
+        console.log(guun.getAttribute('data'));
+        console.log(guun.hasAttribute('data'))
+        guun.removeAttribute('data');
+
+        //Making arrays of children
+        const jk = Array.from(klo.children);
+        console.log(jk[2].textContent);
+
+        //Creating and removing the node element..
+        const newElement = document.createElement('div');
+        /*const lo = document.createTextNode("Namaste World");
+        const text  = "Hello World";
+        newElement.append(text);
+        newElement.append(lo);
+        */
+        newElement.innerHTML = ` <ul id="klo">
+            <li class="bits" id="pop">One</li>
+            <li class="bits">Two</li>
+            <li class="bits">Three</li>
+            <li class="bits">Four</li>
+            <li class="bits">Five</li>
+    </ul>`;
+        document.body.append(newElement);
+
+        //Replacing the node element..
+        guun.replaceWith(newElement);//Replacing the node element
+        newElement.remove(); // Removing the node element
+
+
+    //Events related...
+    fuck.addEventListener('click', loo)
+    /*fuck.addEventListener('click', goo)
+    fuck.addEventListener('click', loo)
+    function foo()
+    {
+        alert("Hit me harder!");
+    }
+    function goo()
+    {
+        alert("Dont hit me like this!");
+    }*/
+    function loo()
+    {
+        console.log(this); // Does same work as event.target;
+        console.log(event.type);
+        console.log(event.target);
+        console.log(event.clientX);
+        console.log(event.clientY);
+
+        alert("Get out of the webpage you rascal!");
+    }
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

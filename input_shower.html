@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        p
+        {
+            color: hotpink;
+            font-family: sans-serif,cursive;
+            text-decoration: underline;
+            padding: 5px;
+            margin: 2px;
+        }
+        body
+        {
+            background-color: aliceblue;
+        }
+    </style>
+    <title>Input ka khel</title>
+</head>
+<body>
+    <h1>Input ka khel</h1>
+    <script>
+        let l = prompt("Enter the number of inputs");
+        for (let i = 0; i < l; i++) {
+            let a = prompt("Enter the number,string or character");
+            const display = document.createElement('p');
+            display.append(a);
+            document.body.append(display);
+            
+        }
+            
+    </script>
+    
+</body>
+</html>
